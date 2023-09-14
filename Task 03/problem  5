@@ -1,0 +1,17 @@
+def largest_prime_factor(n):
+    i = 2
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+    return n
+l=[]
+x=int(input(""))
+for i in range(x):
+    num = int(input(""))
+    result = largest_prime_factor(num)
+    l.append(result)
+for i in l:
+    print(i)
+
