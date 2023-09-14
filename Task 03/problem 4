@@ -1,0 +1,16 @@
+t=int(input(""))
+l=[]
+for a in range(t):
+    sum=0
+    n = int(input().strip())
+    fib_series = []
+    a, b = 0, 1
+    while a < n:
+        fib_series.append(a)
+        a, b = b, a + b
+    for i in fib_series:
+        if i%2==0:
+            sum+=i
+    l.append(sum)
+for i in l:
+    print(i)
